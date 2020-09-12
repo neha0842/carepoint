@@ -1,0 +1,125 @@
+<div class="container-fluid text-white bg-dark p-3">
+    <div class="row">
+        <div class="col-xs-12 col-lg-12 col-md-12">Hello [<i class='bx bx-plus-medical'></i><span style="color: red; font-weight: bolder;">RAHUL SINGH</span><i class='bx bx-plus-medical'></i>]</div>
+    </div>
+  </div>
+  
+
+  <div class="container mt-5">
+      <div class="row">
+          <div class="col-md-12 col-lg-12">
+            <div class="jumbotron">
+                <h1 class="display-3">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <p class="lead">
+                  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                </p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-xs-6 col-md-6 col-lg-6" *ngIf="!submitted">
+          <form>
+            <fieldset>
+                <span style="font-size: 20px;" class="badge badge-info ">Create your Medical Report::</span>
+            
+              <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Name::</label>
+                <input
+                type="text"
+                class="form-control"
+                id="name"
+                required
+                [(ngModel)]="report.name"
+                name="name"
+                placeholder="Enter your name"
+              />
+              </div>
+
+              <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Email::</label>
+                <input
+                type="text"
+                class="form-control"
+                id="email"
+                required
+                [(ngModel)]="report.email"
+                name="email"
+                placeholder="Enter your name"
+              />
+              </div>
+
+              <div class="form-group">
+                <label class="col-form-label" for="inputDefault">date::</label>
+                <input
+                type="text"
+                class="form-control"
+                id="date"
+                required
+                [(ngModel)]="report.date"
+                name="date"
+                placeholder="Enter your name"
+              />
+              </div>
+
+              <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Age::</label>
+                <input
+                type="text"
+                class="form-control"
+                id="age"
+                required
+                [(ngModel)]="report.age"
+                name="age"
+                placeholder="Enter your name"
+              />
+              </div>
+
+              <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Mobile Number::</label>
+                <input
+                type="text"
+                class="form-control"
+                id="mobile"
+                required
+                [(ngModel)]="report.mobile"
+                name="mobile"
+                placeholder="Enter your name"
+              />
+              </div>
+
+              <div class="form-group">
+                <label for="exampleTextarea">Your Diagnoised Result::</label>
+                <input
+                type="text"
+                class="form-control"
+                id="result"
+                required
+                [(ngModel)]="report.result"
+                name="result"
+                placeholder="Enter your name"
+              />
+              </div>
+            
+              <button  (click)="savereport()" type="button" class="btn btn-primary btn-lg">Submit</button>
+              <button type="reset" class="btn btn-danger btn-lg ml-1">Reset</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="col-xs-6 col-md-6 col-lg-6 text-center  d-flex align-items-center justify-content-center about-img">
+            
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>

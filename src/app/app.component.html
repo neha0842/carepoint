@@ -1,0 +1,5 @@
+<app-header></app-header>
+<app-landing-body *ngIf="router.url=='/'"></app-landing-body>
+<app-take-test *ngIf="router.url=='/take-test'"></app-take-test>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

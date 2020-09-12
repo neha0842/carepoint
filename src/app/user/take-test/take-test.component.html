@@ -1,0 +1,1402 @@
+<div class="container-fluid text-white bg-dark p-3">
+  <div class="row">
+      <div class="col-xs-12 col-lg-12 col-md-12">Hello [<i class='bx bx-plus-medical'></i><span style="color: red; font-weight: bolder;">RAHUL SINGH</span><i class='bx bx-plus-medical'></i>]</div>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  <div class="jumbotron">
+      <h1 class="display-3">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div>
+    </div>
+
+
+
+<!--Select your Disease-->
+<div class="container">
+  <div class="row">
+    <div  class="col-xs-6 col-md-6 col-lg-6 p-3">
+    <fieldset class="form-group" (change)="setvalue($event)">
+      <h3 class="font-weight-bold text-danger">Choose Your Disease</h3>
+      <!--default casee-->
+      <div class="form-check">
+        <label class="form-check-label h4 text-info font-weight-bold">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="default" checked="">
+              --select--
+        </label>
+      </div>
+      <!--covid19-->
+      <div class="form-check">
+        <label class="form-check-label h4 text-success font-weight-bold mt-2">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="covid19">
+          [&nbsp;COVID-19&nbsp;]
+        </label>
+      </div>
+      <!--endd covid-->
+
+      <!--CANCER-->
+      <div class="form-check">
+        <label class="form-check-label h4 text-success font-weight-bold mt-2">
+          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="cancer">
+          [&nbsp;CANCER&nbsp;]
+        </label>
+      </div>
+     <!--CANCER ENDDD-->
+
+     <!--Diabetes-->
+     <div class="form-check">
+      <label class="form-check-label h4 text-success font-weight-bold mt-2">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="diabetes">
+        [&nbsp;DIABETES&nbsp;]
+      </label>
+    </div>
+     <!--diabetes endd-->
+
+     <!--malaria-->
+     <div class="form-check">
+      <label class="form-check-label h4 text-success font-weight-bold mt-2">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="malaria">
+        [&nbsp;MALARIA&nbsp;]
+      </label>
+    </div>
+     <!--malaria ennd-->
+
+     <!--dengue-->
+     <div class="form-check">
+      <label class="form-check-label h4 text-success font-weight-bold mt-2">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="dengue">
+        [&nbsp;Dengue&nbsp;]
+      </label>
+    </div>
+    <!--dengue endd-->
+
+
+    <!--jaundice-->
+    <div class="form-check">
+      <label class="form-check-label h4 text-success font-weight-bold mt-2">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="jaundice">
+        [&nbsp;JAUNDICE&nbsp;]
+      </label>
+    </div>
+    <!--jaundice endd-->
+
+    <!--diarrhoea-->
+    <div class="form-check">
+      <label class="form-check-label h4 text-success font-weight-bold mt-2">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="diarrhoea">
+        [&nbsp;DIARRHORA&nbsp;]
+      </label>
+    </div>
+    <!--diarrhoea END-->
+
+    <!--depression-->
+    <div class="form-check">
+      <label class="form-check-label h4 text-success font-weight-bold mt-2">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="depression">
+        [&nbsp;DEPRESSION&nbsp;]
+      </label>
+    </div>
+    <!--depession end-->
+
+    <!--tuberculosis-->
+    <div class="form-check">
+      <label class="form-check-label h4 text-success font-weight-bold mt-2">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="tuberculosis">
+        [&nbsp;TUBERCLUOSIS&nbsp;]
+      </label>
+    </div>
+    <!--tuberculosis endd-->
+    </fieldset>
+    </div>
+  <div class="col-xs-6 col-md-6 col-lg-6" [ngSwitch]="choose">
+    <fieldset class="form-group">
+      <h3 class="font-weight-bold text-danger">Choose Your Symptoms</h3>
+      <div class="form-check">
+        <label class="form-check-label" *ngSwitchCase="'covid19'">
+
+
+
+
+
+         <!-- covid 19 symptoms-->
+         <fieldset class="form-group"  >
+         
+          <div class="form-check" (change)="setvalue1($event)">
+            <label class="form-check-label font-weight-bold">
+              <input class="form-check-input" type="checkbox" value="fever" >
+              Fever or chills
+            </label>
+          </div>
+          <div class="form-check" (change)="setvalue1($event)">
+            <label class="form-check-label font-weight-bold">
+              <input class="form-check-input" type="checkbox" value="cough" >
+              Cough including [Fever or chills]
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+              <input class="form-check-input" type="checkbox" value="short" >
+              Shortness of breath or difficulty breathing including [Fever or chills and cough]
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+              <input class="form-check-input" type="checkbox" value="body" >
+              Muscle or body aches including [all above three]
+            </label>
+          </div>
+          
+        </fieldset>
+         <!--end covid-19  symtoms-->
+
+
+
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" *ngSwitchCase="'cancer'">
+         <!--cancer symptoms-->
+
+         <fieldset class="form-group"  >
+         
+          <div class="form-check" (change)="setvalue1($event)">
+            <label class="form-check-label font-weight-bold">
+              <input class="form-check-input" type="checkbox" value="pain" >
+              Pain , Weight loss without trying , Fatiuge , changes in your skin
+            </label>
+          </div>
+          <div class="form-check" (change)="setvalue1($event)">
+            <label class="form-check-label font-weight-bold">
+              <input class="form-check-input" type="checkbox" value="heal" >
+              Cough or hoarseness that doesn’t go away, Sores that don’t heal,Unusual bleeding,Unusual bleeding<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+              <input class="form-check-input" type="checkbox" value="peeing" >
+              Trouble peeing, Vaginal bleeding or discharge(For womans), Changes in appetite, Belly pain and bloating,<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+              <input class="form-check-input" type="checkbox" value="breast" >
+              Breast changes<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+            </label>
+          </div>
+          
+        </fieldset>
+         <!--cancer symptoms endddd-->
+
+         
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" *ngSwitchCase="'diabetes'">
+         <!--DIABETES SYMPTOMS-->
+         <fieldset class="form-group"  >
+         
+          <div class="form-check" (change)="setvalue1($event)">
+            <label class="form-check-label font-weight-bold">
+              <input class="form-check-input" type="checkbox" value="urinating" >
+              Urinating often, Feeling very thirsty
+            </label>
+          </div>
+          <div class="form-check" (change)="setvalue1($event)">
+            <label class="form-check-label font-weight-bold">
+              <input class="form-check-input" type="checkbox" value="hungry" >
+              Feeling very hungry—even though you are eating, Extreme fatigue <p style="color: rgb(0, 255, 115);">[including above symptoms]</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+              <input class="form-check-input" type="checkbox" value="vision" >
+              Blurry vision, Weight loss—even though you are eating more, Cuts/bruises that are slow to heal<p style="color: rgb(0, 255, 115);">[including above symptoms]</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+              <input class="form-check-input" type="checkbox" value="numbness" >
+              Tingling, pain, or numbness in the hands/feet<p style="color: rgb(0, 255, 115);">[including above symptoms]</p>
+            </label>
+          </div>
+          
+        </fieldset>
+         <!--DIABETES ENDDDD-->
+
+           
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" *ngSwitchCase="'malaria'">
+         <!--malaria SYMPTOMS-->
+         <fieldset class="form-group"  >
+         
+          <div class="form-check" (change)="setvalue1($event)">
+            <label class="form-check-label font-weight-bold">
+              <input class="form-check-input" type="checkbox" value="mal1" >
+              a high temperature of 38C or above...feeling hot and shivery
+            </label>
+          </div>
+          <div class="form-check" (change)="setvalue1($event)">
+            <label class="form-check-label font-weight-bold">
+              <input class="form-check-input" type="checkbox" value="mal2" >
+              headaches...vomiting <p style="color: rgb(0, 255, 115);">[including above symptoms]</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+              <input class="form-check-input" type="checkbox" value="mal3" >
+              muscle pains...diarrhoea<p style="color: rgb(0, 255, 115);">[including above symptoms]</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+              <input class="form-check-input" type="checkbox" value="mal4" >
+              generally feeling unwell<p style="color: rgb(0, 255, 115);">[including above symptoms]</p>
+            </label>
+          </div>
+          
+        </fieldset>
+        <!--malaria symptoms ennd-->
+
+             
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label" *ngSwitchCase="'dengue'">
+       <!--denguee SYMPTOMS-->
+       <fieldset class="form-group"  >
+       
+        <div class="form-check" (change)="setvalue1($event)">
+          <label class="form-check-label font-weight-bold">
+            <input class="form-check-input" type="checkbox" value="den1" >
+            Nausea, vomiting
+          </label>
+        </div>
+        <div class="form-check" (change)="setvalue1($event)">
+          <label class="form-check-label font-weight-bold">
+            <input class="form-check-input" type="checkbox" value="den2" >
+            Rash <p style="color: rgb(0, 255, 115);">[including above symptoms]</p>
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+            <input class="form-check-input" type="checkbox" value="den3" >
+            Aches and pains (eye pain, typically behind the eyes, muscle, joint, or bone pain)<p style="color: rgb(0, 255, 115);">[including above symptoms]</p>
+          </label>
+        </div>
+        
+      </fieldset>
+      <!--dengue symptoms ennd-->
+
+
+      
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" *ngSwitchCase="'jaundice'">
+     <!--jaundice symptoms-->
+
+     <fieldset class="form-group"  >
+     
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox" value="jau1" >
+          Fever. Chills.
+        </label>
+      </div>
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox" value="jau2" >
+          Abdominal pain. Flu-like symptoms.<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+          <input class="form-check-input" type="checkbox" value="jau3" >
+          Change in skin color... Dark-colored urine and/or clay-colored stool.<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+        </label>
+      </div>
+      
+    </fieldset>
+     <!--jaundince symptoms endddd-->
+
+        
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" *ngSwitchCase="'diarrhoea'">
+     <!--diarrehoea symptoms-->
+
+     <fieldset class="form-group"  >
+     
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox" value="dia1" >
+          Loose, watery stools
+          Abdominal cramps
+          Abdominal pain
+        </label>
+      </div>
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox" value="jau2" >
+          Fever
+Blood in the stool
+Mucus in the stool<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+          <input class="form-check-input" type="checkbox" value="jau3" >
+          Bloating
+Nausea
+Urgent need to have a bowel movement.<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+        </label>
+      </div>
+      
+    </fieldset>
+     <!--diarrehoea symptoms endddd-->
+
+
+     
+        
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" *ngSwitchCase="'depression'">
+     <!--depression symptoms-->
+
+     <fieldset class="form-group"  >
+     
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox" value="dep1" >
+          Trouble concentrating, remembering details, and making decisions
+          Fatigue
+          Feelings of guilt, worthlessness, and helplessness
+          Pessimism and hopelessness
+        </label>
+      </div>
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox" value="dep2" >
+          Insomnia, early-morning wakefulness, or sleeping too much
+          Irritability
+          Restlessness
+          Loss of interest in things once pleasurable, including sex<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+          <input class="form-check-input" type="checkbox" value="dep3" >
+          Overeating, or appetite loss
+          Aches, pains, headaches, or cramps that won't go away
+          Digestive problems that don't get better, even with treatment
+          Persistent sad, anxious, or "empty" feelings
+          Suicidal thoughts or attempts
+          <p style="color:rgb(0, 255, 115);">[Including above points]</p>
+        </label>
+      </div>
+      
+    </fieldset>
+     <!--Depression symptoms endddd-->
+
+
+         
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" *ngSwitchCase="'tuberculosis'">
+     <!--tuberclusis symptoms-->
+
+     <fieldset class="form-group"  >
+     
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox" value="tub1" >
+          A cough that lasts more than 3 weeks
+          Chest pain
+          Coughing up blood
+        </label>
+      </div>
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox" value="tub2" >
+          Feeling tired all the time
+          Night sweats
+          Chills<p style="color:rgb(0, 255, 115);">[Including above points]</p>
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label font-weight-bold" (change)="setvalue1($event)">
+          <input class="form-check-input" type="checkbox" value="tub3" >
+          Fever
+Loss of appetite
+Weight loss
+          <p style="color:rgb(0, 255, 115);">[Including above points]</p>
+        </label>
+      </div>
+      
+    </fieldset>
+     <!--tuberclusis symptoms endddd-->
+
+     
+    </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label" *ngSwitchDefault="'default'">
+     <!--default casee-->
+
+     <fieldset class="form-group"  >
+     
+      <div class="form-check" (change)="setvalue1($event)">
+        <label class="form-check-label font-weight-bold">
+          <input class="form-check-input" type="checkbox"  >
+          --Choose some of  symptoms--
+        </label>
+      </div>
+     </fieldset>
+
+        </label>
+      </div>
+     
+    </fieldset>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--final result of covid-19-->
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'fever'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>May be some Normal Fever or flu.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+          <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'cough'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Just make yourself home qrantined and drink some tea or khadha<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+        <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'short'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>Must take your covid19 test. <<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'body'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>You tested poitive for covid19.....be relax..... and take your medicine<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--endd of final result of covidd-19-->
+
+
+
+<!--final result of cancer-->
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'pain'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>No need to worry, take some medicine you will be fit<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'heal'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Take some consultations with doctor online. Need to be checkup by a doctor<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'peeing'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>Need to be done Immunotherapy immediately<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'breast'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>Just Few days left in your life. Enjoy!!!!!!!<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end of final cancerr-->
+
+
+
+<!--Final result of diabetes-->
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'urinating'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>May be some other problem no need to worry<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'hungry'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>Cut Sugar and Refined Carbs From Your Diet<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'vision'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>TYPE A diabetes.... Lose Weight If You’re Overweight or Obese....Drink Water as Your Primary Beverage<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'numbness'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>type B diabetes...Make healthy eating and physical activity part of your daily routine. Maintain a healthy weight. Monitor your blood sugar, and follow your doctor's instructions for managing your blood sugar level. Take your medications as directed by your doctor.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--End of final result of diabetes-->
+
+<!--final result of malaria-->
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'mal1'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Applying mosquito repellents. Remember to reapply it frequently...no need to worry<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'mal2'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>A Opt for loose-fitted clothes instead of tight ones..... Stay indoors during the evenings.....You should also keep your fan on at night.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'mal3'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Spray an insecticide or repellent on clothing, as mosquitoes may bite through thin clothing.....Spray pyrethrin or a similar insecticide in your bedroom before going to bed.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'mal4'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>Consult to a doctor as soon as.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end of final result-->
+
+
+<!--final result of denguue-->
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'den1'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>> Wear long-sleeves and long pants to cover your arms and legs.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'den2'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Apply mosquito repellent, ideally one containing DEET.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'den3'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>as soon as consoult to a doctor.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end of final result of doctor-->
+
+
+<!--final of jaundice-->
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'jau1'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Ensuring not to exceed the recommended daily amount (RDA) for alcohol consumption.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'jau2'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Avoid high-risk behaviours such as intravenous drug use or unprotected intercourse.
+              Avoid potentially contaminated food/water and maintain good hygiene<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'jau3'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>Consult to a doctor immediately<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end of final of jaundice-->
+
+<!--final result of diarrohea-->
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'dia1'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Wash your hands before and after preparing food. Wash your hands after handling uncooked meat, using the toilet, changing diapers, sneezing, coughing and blowing your nose.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'dia2'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>> After putting soap on your hands, rub your hands together for at least 20 seconds. This is about as long as it takes to sing "Happy Birthday" twice through..<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'dia3'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>> You should consult a doctor immediately<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end of final result o diarrohea-->
+
+<!--final result of depression-->
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'dep1'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Find ways to handle stress and improve your self-esteem.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'dep2'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Take good care of yourself. Get enough sleep, eat well, and exercise regularly.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'dep3'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>Consult psychiatrist near you.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end inal result of depression-->
+
+<!--final result of tuberclosis-->
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'tub1'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Always cover your mouth with a tissue when you cough or sneeze. Seal the tissue in a plastic bag, then throw it away.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'tub2'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-success">>>>>Use a fan or open windows to move around fresh air...Don’t use public transportation..<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+      <a routerLink="/report"  routerLinkActive="Active" class="btn btn-secondary">>>>>Fill out this form<<<<<</a><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" [ngSwitch]="choose1">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12"  *ngSwitchCase="'tub3'">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 h3 text-danger">>>>>Take all of your medicines as they’re prescribed, until your doctor takes you off them.<<<<<</h5>
+        
+            <small>Take precautions</small>
+          </div>
+          <p class="mb-1">Excellent health care... ...</p>
+          
+        </a>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Caring For You And Your Family.</h5>
+         
+          </div>
+       <button routerLink="/report"  class="btn btn-secondary">>>>>Fill out this form<<<<<</button><p>To genrate your Medical report.</p>
+ 
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end final result of tuberclusis-->
+<br>
+<br>
