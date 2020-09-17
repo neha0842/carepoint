@@ -1,0 +1,95 @@
+<div class="mt-5" style="width: 400px; margin: auto;">
+    <div *ngIf="currentTutorial" class="edit-form">
+      <h4 class="font-weight-bolder">carepoint Reports</h4>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            [(ngModel)]="currentTutorial.name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            [(ngModel)]="currentTutorial.email"
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input
+              type="text"
+              class="form-control"
+              id="date"
+              [(ngModel)]="currentTutorial.date"
+              name="date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="text"
+              class="form-control"
+              id="age"
+              [(ngModel)]="currentTutorial.age"
+              name="age"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input
+              type="text"
+              class="form-control"
+              id="mobile"
+              [(ngModel)]="currentTutorial.mobile"
+              name="mobile"
+            />
+          </div>
+          <div class="form-group">
+            <label for="result">Result</label>
+            <input
+              type="text"
+              class="form-control"
+              id="result"
+              [(ngModel)]="currentTutorial.result"
+              name="result"
+            />
+          </div>
+        
+      </form>
+     
+     
+  
+      <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+        Delete
+      </button>
+  
+      <button
+        type="submit"
+        class="badge badge-success"
+        (click)="updateTutorial()"
+      >
+        Update
+      </button>
+      <br>
+      <br>
+      <span class="badge badge-success">{{ message }}</span>
+    </div>
+  
+    <div *ngIf="!currentTutorial">
+      <br />
+      <p>Cannot access this Tutorial...</p>
+    </div>
+  </div>
+
+
+  <br>
+  <br>
+  <br>

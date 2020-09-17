@@ -8,17 +8,15 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link h5 text-bold" routerLink="/" routerLinkActive="Active" >Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link h5 text-bold font-weight-bolder" routerLink="/" routerLinkActive="Active" >[Home]<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link h5" routerLink="/take-test" routerLinkActive="Active">Take your Test <span class="sr-only">(current)</span></a>
+          <a class="nav-link h5 font-weight-bolder" routerLink="/take-test" routerLinkActive="Active">[Take your Test] <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item p-1">
-          <button class="btn btn-danger p-2">Login</button>
+          <button routerLink="/fetch-report" routerLinkActive="Active" class="btn btn-danger p-2">Get all reports</button>
         </li>
-        <li class="nav-item p-1">
-          <button type="button" class="btn btn-outline-dark p-2">Signup</button>
-        </li>
+       
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search">

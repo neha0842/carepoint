@@ -2,17 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
-import { DiagnosisComponent } from './diagnosis/diagnosis.component';
-import { DiagnosisOneComponent } from './diagnosis-one/diagnosis-one.component';
+
 import { TakeTestComponent } from './take-test/take-test.component';
 import { ReportComponent } from './report/report.component';
+import {FormsModule } from '@angular/forms';
+import {ReactiveFormsModule } from '@angular/forms';
+import { FetchReportComponent } from './fetch-report/fetch-report.component';
+import { ReportDeatilsComponent } from './report-deatils/report-deatils.component';
 
 
 @NgModule({
-  declarations: [DiagnosisComponent, DiagnosisOneComponent, TakeTestComponent, ReportComponent],
+  declarations: [TakeTestComponent, ReportComponent, FetchReportComponent, ReportDeatilsComponent],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class UserModule { }

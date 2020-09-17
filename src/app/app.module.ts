@@ -10,11 +10,12 @@ import { MatSliderModule } from '@angular/material/slider';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
-import { from } from 'rxjs';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
  
   ],
-  providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

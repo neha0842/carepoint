@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CareService} from 'src/app/services/care.service';
 
+
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
@@ -15,6 +16,7 @@ export class ReportComponent implements OnInit {
     age:'',
     mobile:'',
     result:'',
+    published: false
   };
   submitted = false;
 
@@ -53,6 +55,7 @@ export class ReportComponent implements OnInit {
       age:'',
       mobile:'',
       result:'',
+      published: false
     };
   }
 
